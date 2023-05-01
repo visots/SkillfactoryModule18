@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task18_2_4 Command", "Task1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task18_3_7", "Task18_3_7\Task18_3_7.csproj", "{1D73F93C-04D9-4A3E-B7B1-17720EE4346D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{0EC27A4B-5FF1-40D4-982E-01875B7803F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task18_3_8", "ConsoleApp1\Task18_3_8.csproj", "{0EC27A4B-5FF1-40D4-982E-01875B7803F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
