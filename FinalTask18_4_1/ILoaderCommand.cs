@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace FinalTask18_4_1
 {
-    public abstract class Command
+    public interface ILoaderCommand
     {
-        public abstract void Execute(); 
+        public void Load(string uri);
+
+        public void GetInfo();
     }
 }

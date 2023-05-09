@@ -14,40 +14,40 @@ namespace FinalTask18_4_1
 
         static void Main(string[] args)
         {
+            
+            //_client = new YoutubeClient();
+            //DownloadAsync(link);
 
-            _client = new YoutubeClient();
-            DownloadAsync(link);
-
-            Task task = new Task(() => DownloadAsync(link));
-            task.Wait();
+            //Task task = new Task(() => DownloadAsync(link));
+            //task.Wait();
         }
 
 
-        public static async void DownloadAsync(string uri)
-        {
-            //try
-            //{
-            Console.WriteLine("Download video");
+        //public static async void DownloadAsync(string uri)
+        //{
+        //    //try
+        //    //{
+        //    Console.WriteLine("Download video");
 
-            var progress = new Progress<double>();
-            progress.ProgressChanged += (s, e) =>
-            {
-                    string progressMsg = "Загружено: ";
-                    Console.WriteLine($"{progressMsg}{e:P2}");
-                    //Console.SetCursorPosition(0, Console.CursorTop-1);
-                    //Console.Write("\r" + new string(' ', Console.BufferWidth) + "\r");
-            };
+        //    var progress = new Progress<double>();
+        //    progress.ProgressChanged += (s, e) =>
+        //    {
+        //            string progressMsg = "Загружено: ";
+        //            Console.WriteLine($"{progressMsg}{e:P2}");
+        //            //Console.SetCursorPosition(0, Console.CursorTop-1);
+        //            //Console.Write("\r" + new string(' ', Console.BufferWidth) + "\r");
+        //    };
 
-            var video = _client.Videos.GetAsync(uri);
-            var streamManifest = await _client.Videos.Streams.GetManifestAsync(uri);
-            var streamInfo = streamManifest.GetMuxedStreams().GetWithHighestVideoQuality();
-            await _client.Videos.DownloadAsync(uri, $"{outputFilePath}/{video.Result.Title}.{streamInfo.Container}", progress);
-            Console.WriteLine("Video downloaded");
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
-        }
+        //    var video = _client.Videos.GetAsync(uri);
+        //    var streamManifest = await _client.Videos.Streams.GetManifestAsync(uri);
+        //    var streamInfo = streamManifest.GetMuxedStreams().GetWithHighestVideoQuality();
+        //    await _client.Videos.DownloadAsync(uri, $"{outputFilePath}/{video.Result.Title}.{streamInfo.Container}", progress);
+        //    Console.WriteLine("Video downloaded");
+        //    //}
+        //    //catch (Exception e)
+        //    //{
+        //    //    Console.WriteLine(e.Message);
+        //    //}
+        //}
     }
 }
