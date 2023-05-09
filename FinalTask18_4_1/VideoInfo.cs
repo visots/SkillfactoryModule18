@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FinalTask18_4_1
 {
-    public interface ILoaderCommand
+    public class VideoInfo
     {
-        public void Load(string uri);
-
-        public VideoInfo GetInfo(string uri);
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Description { get; set; } 
     }
 }

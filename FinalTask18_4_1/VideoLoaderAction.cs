@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace FinalTask18_4_1
 {
-    internal class VideoLoaderAction : ILoaderCommand
+    public class VideoLoaderAction : ILoaderCommand
     {
 
-        private VideoLoader _videoLoader;
+        private YoutubeLoader _videoLoader;
 
-        VideoLoaderAction(VideoLoader videoLoader)
+        public VideoLoaderAction(YoutubeLoader videoLoader)
         {
             _videoLoader = videoLoader;
         }
@@ -21,9 +21,9 @@ namespace FinalTask18_4_1
             _videoLoader.Download(uri);
         }
 
-        public void GetInfo()
+        public VideoInfo GetInfo(string uri)
         {
-           _videoLoader.GetInfo();
+           return _videoLoader.GetInfo(uri);
         }
     }
 }
